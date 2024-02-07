@@ -1,0 +1,490 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>1/3/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Dec 13 09:40:24 MST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>3 seconds (3284 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests_michroTech.Test_Create_Order.test_Create_Order()'><b>test_Create_Order</b><br>Test class: tests_michroTech.Test_Create_Order</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Error {
+  message=&apos;net::ERR_ABORTED at https://it.microtechlimited.com/
+=========================== logs ===========================
+navigating to &quot;https://it.microtechlimited.com/&quot;, waiting until &quot;load&quot;
+============================================================
+  name=&apos;Error
+  stack=&apos;Error: net::ERR_ABORTED at https://it.microtechlimited.com/
+=========================== logs ===========================
+navigating to &quot;https://it.microtechlimited.com/&quot;, waiting until &quot;load&quot;
+============================================================
+    at FrameSession._navigate (C:\Users\mahfo\AppData\Local\Temp\playwright-java-2535856603368293870\package\lib\server\chromium\crPage.js:506:35)
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at process.processImmediate (node:internal/timers:447:9)
+    at async Frame._gotoAction (C:\Users\mahfo\AppData\Local\Temp\playwright-java-2535856603368293870\package\lib\server\frames.js:534:28)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:120)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:126)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
+	at com.microsoft.playwright.impl.FrameImpl.navigateImpl(FrameImpl.java:463)
+	at com.microsoft.playwright.impl.PageImpl.lambda$navigate$45(PageImpl.java:827)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+	at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:827)
+	at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:42)
+	at com.microsoft.playwright.Page.navigate(Page.java:5282)
+	at base.Base.navigate(Base.java:49)
+	at tests_michroTech.Test_Create_Order.test_Create_Order(Test_Create_Order.java:12)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message=&apos;net::ERR_ABORTED at https://it.microtechlimited.com/
+=========================== logs ===========================
+navigating to &quot;https://it.microtechlimited.com/&quot;, waiting until &quot;load&quot;
+============================================================
+  name=&apos;Error
+  stack=&apos;Error: net::ERR_ABORTED at https://it.microtechlimited.com/
+=========================== logs ===========================
+navigating to &quot;https://it.microtechlimited.com/&quot;, waiting until &quot;load&quot;
+============================================================
+    at FrameSession._navigate (C:\Users\mahfo\AppData\Local\Temp\playwright-java-2535856603368293870\package\lib\server\chromium\crPage.js:506:35)
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at process.processImmediate (node:internal/timers:447:9)
+    at async Frame._gotoAction (C:\Users\mahfo\AppData\Local\Temp\playwright-java-2535856603368293870\package\lib\server\frames.js:534:28)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:226)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:206)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:126)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
+	at com.microsoft.playwright.impl.FrameImpl.navigateImpl(FrameImpl.java:463)
+	at com.microsoft.playwright.impl.PageImpl.lambda$navigate$45(PageImpl.java:827)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+	at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:827)
+	at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:42)
+	at com.microsoft.playwright.Page.navigate(Page.java:5282)
+	at base.Base.navigate(Base.java:49)
+	at tests_michroTech.HomePageVerification.homePageVerification(HomePageVerification.java:12)
+	... 15 more
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1483985829", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1483985829'><pre>com.microsoft.playwright.PlaywrightException: Error {
+  message=&apos;net::ERR_ABORTED at https://it.microtechlimited.com/
+=========================== logs ===========================
+navigating to &quot;https://it.microtechlimited.com/&quot;, waiting until &quot;load&quot;
+============================================================
+  name=&apos;Error
+  stack=&apos;Error: net::ERR_ABORTED at https://it.microtechlimited.com/
+=========================== logs ===========================
+navigating to &quot;https://it.microtechlimited.com/&quot;, waiting until &quot;load&quot;
+============================================================
+    at FrameSession._navigate (C:\Users\mahfo\AppData\Local\Temp\playwright-java-2535856603368293870\package\lib\server\chromium\crPage.js:506:35)
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at process.processImmediate (node:internal/timers:447:9)
+    at async Frame._gotoAction (C:\Users\mahfo\AppData\Local\Temp\playwright-java-2535856603368293870\package\lib\server\frames.js:534:28)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:120)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:126)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
+	at com.microsoft.playwright.impl.FrameImpl.navigateImpl(FrameImpl.java:463)
+	at com.microsoft.playwright.impl.PageImpl.lambda$navigate$45(PageImpl.java:827)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+	at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:827)
+	at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:42)
+	at com.microsoft.playwright.Page.navigate(Page.java:5282)
+	at base.Base.navigate(Base.java:49)
+	at tests_michroTech.Test_Create_Order.test_Create_Order(Test_Create_Order.java:12)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message=&apos;net::ERR_ABORTED at https://it.microtechlimited.com/
+=========================== logs ===========================
+navigating to &quot;https://it.microtechlimited.com/&quot;, waiting until &quot;load&quot;
+============================================================
+  name=&apos;Error
+  stack=&apos;Error: net::ERR_ABORTED at https://it.microtechlimited.com/
+=========================== logs ===========================
+navigating to &quot;https://it.microtechlimited.com/&quot;, waiting until &quot;load&quot;
+============================================================
+    at FrameSession._navigate (C:\Users\mahfo\AppData\Local\Temp\playwright-java-2535856603368293870\package\lib\server\chromium\crPage.js:506:35)
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at process.processImmediate (node:internal/timers:447:9)
+    at async Frame._gotoAction (C:\Users\mahfo\AppData\Local\Temp\playwright-java-2535856603368293870\package\lib\server\frames.js:534:28)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:226)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:206)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:126)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
+	at com.microsoft.playwright.impl.FrameImpl.navigateImpl(FrameImpl.java:463)
+	at com.microsoft.playwright.impl.PageImpl.lambda$navigate$45(PageImpl.java:827)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+	at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:827)
+	at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:42)
+	at com.microsoft.playwright.Page.navigate(Page.java:5282)
+	at base.Base.navigate(Base.java:49)
+	at tests_michroTech.HomePageVerification.homePageVerification(HomePageVerification.java:12)
+	... 15 more
+</pre></div></td>
+<td>0</td>
+<td>tests_michroTech.Test_Create_Order@3d51f06e</td></tr>
+<tr>
+<td title='tests_michroTech.HomePageVerification.homePageVerification()'><b>homePageVerification</b><br>Test class: tests_michroTech.HomePageVerification</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Error {
+  message=&apos;net::ERR_ABORTED at https://it.microtechlimited.com/
+=========================== logs ===========================
+navigating to &quot;https://it.microtechlimited.com/&quot;, waiting until &quot;load&quot;
+============================================================
+  name=&apos;Error
+  stack=&apos;Error: net::ERR_ABORTED at https://it.microtechlimited.com/
+=========================== logs ===========================
+navigating to &quot;https://it.microtechlimited.com/&quot;, waiting until &quot;load&quot;
+============================================================
+    at FrameSession._navigate (C:\Users\mahfo\AppData\Local\Temp\playwright-java-2535856603368293870\package\lib\server\chromium\crPage.js:506:35)
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at process.processImmediate (node:internal/timers:447:9)
+    at async Frame._gotoAction (C:\Users\mahfo\AppData\Local\Temp\playwright-java-2535856603368293870\package\lib\server\frames.js:534:28)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:120)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:126)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
+	at com.microsoft.playwright.impl.FrameImpl.navigateImpl(FrameImpl.java:463)
+	at com.microsoft.playwright.impl.PageImpl.lambda$navigate$45(PageImpl.java:827)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+	at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:827)
+	at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:42)
+	at com.microsoft.playwright.Page.navigate(Page.java:5282)
+	at base.Base.navigate(Base.java:49)
+	at tests_michroTech.HomePageVerification.homePageVerification(HomePageVerification.java:12)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message=&apos;net::ERR_ABORTED at https://it.microtechlimited.com/
+=========================== logs ===========================
+navigating to &quot;https://it.microtechlimited.com/&quot;, waiting until &quot;load&quot;
+============================================================
+  name=&apos;Error
+  stack=&apos;Error: net::ERR_ABORTED at https://it.microtechlimited.com/
+=========================== logs ===========================
+navigating to &quot;https://it.microtechlimited.com/&quot;, waiting until &quot;load&quot;
+============================================================
+    at FrameSession._navigate (C:\Users\mahfo\AppData\Local\Temp\playwright-java-2535856603368293870\package\lib\server\chromium\crPage.js:506:35)
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at process.processImmediate (node:internal/timers:447:9)
+    at async Frame._gotoAction (C:\Users\mahfo\AppData\Local\Temp\playwright-java-2535856603368293870\package\lib\server\frames.js:534:28)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:226)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:206)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
+	... 26 more
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace592887456", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace592887456'><pre>com.microsoft.playwright.PlaywrightException: Error {
+  message=&apos;net::ERR_ABORTED at https://it.microtechlimited.com/
+=========================== logs ===========================
+navigating to &quot;https://it.microtechlimited.com/&quot;, waiting until &quot;load&quot;
+============================================================
+  name=&apos;Error
+  stack=&apos;Error: net::ERR_ABORTED at https://it.microtechlimited.com/
+=========================== logs ===========================
+navigating to &quot;https://it.microtechlimited.com/&quot;, waiting until &quot;load&quot;
+============================================================
+    at FrameSession._navigate (C:\Users\mahfo\AppData\Local\Temp\playwright-java-2535856603368293870\package\lib\server\chromium\crPage.js:506:35)
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at process.processImmediate (node:internal/timers:447:9)
+    at async Frame._gotoAction (C:\Users\mahfo\AppData\Local\Temp\playwright-java-2535856603368293870\package\lib\server\frames.js:534:28)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:120)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:126)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
+	at com.microsoft.playwright.impl.FrameImpl.navigateImpl(FrameImpl.java:463)
+	at com.microsoft.playwright.impl.PageImpl.lambda$navigate$45(PageImpl.java:827)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+	at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:827)
+	at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:42)
+	at com.microsoft.playwright.Page.navigate(Page.java:5282)
+	at base.Base.navigate(Base.java:49)
+	at tests_michroTech.HomePageVerification.homePageVerification(HomePageVerification.java:12)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message=&apos;net::ERR_ABORTED at https://it.microtechlimited.com/
+=========================== logs ===========================
+navigating to &quot;https://it.microtechlimited.com/&quot;, waiting until &quot;load&quot;
+============================================================
+  name=&apos;Error
+  stack=&apos;Error: net::ERR_ABORTED at https://it.microtechlimited.com/
+=========================== logs ===========================
+navigating to &quot;https://it.microtechlimited.com/&quot;, waiting until &quot;load&quot;
+============================================================
+    at FrameSession._navigate (C:\Users\mahfo\AppData\Local\Temp\playwright-java-2535856603368293870\package\lib\server\chromium\crPage.js:506:35)
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at process.processImmediate (node:internal/timers:447:9)
+    at async Frame._gotoAction (C:\Users\mahfo\AppData\Local\Temp\playwright-java-2535856603368293870\package\lib\server\frames.js:534:28)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:226)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:206)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
+	... 26 more
+</pre></div></td>
+<td>0</td>
+<td>tests_michroTech.HomePageVerification@15eb5ee5</td></tr>
+<tr>
+<td title='tests_michroTech.Test_Employee_Login.test_Employee_Login()'><b>test_Employee_Login</b><br>Test class: tests_michroTech.Test_Employee_Login</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Error {
+  message=&apos;net::ERR_ABORTED at https://it.microtechlimited.com/
+=========================== logs ===========================
+navigating to &quot;https://it.microtechlimited.com/&quot;, waiting until &quot;load&quot;
+============================================================
+  name=&apos;Error
+  stack=&apos;Error: net::ERR_ABORTED at https://it.microtechlimited.com/
+=========================== logs ===========================
+navigating to &quot;https://it.microtechlimited.com/&quot;, waiting until &quot;load&quot;
+============================================================
+    at FrameSession._navigate (C:\Users\mahfo\AppData\Local\Temp\playwright-java-2535856603368293870\package\lib\server\chromium\crPage.js:506:35)
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at process.processImmediate (node:internal/timers:447:9)
+    at async Frame._gotoAction (C:\Users\mahfo\AppData\Local\Temp\playwright-java-2535856603368293870\package\lib\server\frames.js:534:28)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:120)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:126)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
+	at com.microsoft.playwright.impl.FrameImpl.navigateImpl(FrameImpl.java:463)
+	at com.microsoft.playwright.impl.PageImpl.lambda$navigate$45(PageImpl.java:827)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+	at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:827)
+	at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:42)
+	at com.microsoft.playwright.Page.navigate(Page.java:5282)
+	at base.Base.navigate(Base.java:49)
+	at tests_michroTech.Test_Employee_Login.test_Employee_Login(Test_Employee_Login.java:13)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message=&apos;net::ERR_ABORTED at https://it.microtechlimited.com/
+=========================== logs ===========================
+navigating to &quot;https://it.microtechlimited.com/&quot;, waiting until &quot;load&quot;
+============================================================
+  name=&apos;Error
+  stack=&apos;Error: net::ERR_ABORTED at https://it.microtechlimited.com/
+=========================== logs ===========================
+navigating to &quot;https://it.microtechlimited.com/&quot;, waiting until &quot;load&quot;
+============================================================
+    at FrameSession._navigate (C:\Users\mahfo\AppData\Local\Temp\playwright-java-2535856603368293870\package\lib\server\chromium\crPage.js:506:35)
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at process.processImmediate (node:internal/timers:447:9)
+    at async Frame._gotoAction (C:\Users\mahfo\AppData\Local\Temp\playwright-java-2535856603368293870\package\lib\server\frames.js:534:28)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:226)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:206)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:126)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
+	at com.microsoft.playwright.impl.FrameImpl.navigateImpl(FrameImpl.java:463)
+	at com.microsoft.playwright.impl.PageImpl.lambda$navigate$45(PageImpl.java:827)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+	at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:827)
+	at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:42)
+	at com.microsoft.playwright.Page.navigate(Page.java:5282)
+	at base.Base.navigate(Base.java:49)
+	at tests_michroTech.Test_Customer_Login.test_Customer_Login(Test_Customer_Login.java:12)
+	... 15 more
+... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1070614765", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1070614765'><pre>com.microsoft.playwright.PlaywrightException: Error {
+  message=&apos;net::ERR_ABORTED at https://it.microtechlimited.com/
+=========================== logs ===========================
+navigating to &quot;https://it.microtechlimited.com/&quot;, waiting until &quot;load&quot;
+============================================================
+  name=&apos;Error
+  stack=&apos;Error: net::ERR_ABORTED at https://it.microtechlimited.com/
+=========================== logs ===========================
+navigating to &quot;https://it.microtechlimited.com/&quot;, waiting until &quot;load&quot;
+============================================================
+    at FrameSession._navigate (C:\Users\mahfo\AppData\Local\Temp\playwright-java-2535856603368293870\package\lib\server\chromium\crPage.js:506:35)
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at process.processImmediate (node:internal/timers:447:9)
+    at async Frame._gotoAction (C:\Users\mahfo\AppData\Local\Temp\playwright-java-2535856603368293870\package\lib\server\frames.js:534:28)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:54)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:120)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:126)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
+	at com.microsoft.playwright.impl.FrameImpl.navigateImpl(FrameImpl.java:463)
+	at com.microsoft.playwright.impl.PageImpl.lambda$navigate$45(PageImpl.java:827)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+	at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:827)
+	at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:42)
+	at com.microsoft.playwright.Page.navigate(Page.java:5282)
+	at base.Base.navigate(Base.java:49)
+	at tests_michroTech.Test_Employee_Login.test_Employee_Login(Test_Employee_Login.java:13)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message=&apos;net::ERR_ABORTED at https://it.microtechlimited.com/
+=========================== logs ===========================
+navigating to &quot;https://it.microtechlimited.com/&quot;, waiting until &quot;load&quot;
+============================================================
+  name=&apos;Error
+  stack=&apos;Error: net::ERR_ABORTED at https://it.microtechlimited.com/
+=========================== logs ===========================
+navigating to &quot;https://it.microtechlimited.com/&quot;, waiting until &quot;load&quot;
+============================================================
+    at FrameSession._navigate (C:\Users\mahfo\AppData\Local\Temp\playwright-java-2535856603368293870\package\lib\server\chromium\crPage.js:506:35)
+    at runNextTicks (node:internal/process/task_queues:60:5)
+    at process.processImmediate (node:internal/timers:447:9)
+    at async Frame._gotoAction (C:\Users\mahfo\AppData\Local\Temp\playwright-java-2535856603368293870\package\lib\server\frames.js:534:28)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:226)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:206)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:126)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
+	at com.microsoft.playwright.impl.FrameImpl.navigateImpl(FrameImpl.java:463)
+	at com.microsoft.playwright.impl.PageImpl.lambda$navigate$45(PageImpl.java:827)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
+	at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:827)
+	at com.microsoft.playwright.impl.PageImpl.navigate(PageImpl.java:42)
+	at com.microsoft.playwright.Page.navigate(Page.java:5282)
+	at base.Base.navigate(Base.java:49)
+	at tests_michroTech.Test_Customer_Login.test_Customer_Login(Test_Customer_Login.java:12)
+	... 15 more
+</pre></div></td>
+<td>0</td>
+<td>tests_michroTech.Test_Employee_Login@7ed7259e</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests_michroTech.Test_Customer_Login.test_Customer_Login()'><b>test_Customer_Login</b><br>Test class: tests_michroTech.Test_Customer_Login</td>
+<td></td>
+<td>3</td>
+<td>tests_michroTech.Test_Customer_Login@28eaa59a</td></tr>
+</table><p>
+</body>
+</html>

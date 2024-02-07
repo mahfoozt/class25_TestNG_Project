@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="class25_TestNG">
+  <test parallel="tests" name="class25_TestNG_Verification_Test">
+    <packages>
+      <package name="tests_michroTech"/>
+      <package name="tests_michroTech_DataProvider"/>
+      <package name="tests_swagLab"/>
+    </packages>
+  </test> <!-- class25_TestNG_Verification_Test -->
+</suite> <!-- class25_TestNG -->

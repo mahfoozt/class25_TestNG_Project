@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [class25_TestNG]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="class25_TestNG_Verification_Test(failed)">
+    <classes>
+      <class name="tests_swagLab.Test_Swag_Lab_Logout">
+        <methods>
+          <include name="logoutpage3"/>
+          <include name="logoutpage2"/>
+          <include name="Close_All"/>
+          <include name="startUp"/>
+        </methods>
+      </class> <!-- tests_swagLab.Test_Swag_Lab_Logout -->
+      <class name="tests_swagLab.HomePageVerification">
+        <methods>
+          <include name="logoutpage4"/>
+          <include name="Close_All"/>
+          <include name="homePage3"/>
+          <include name="startUp"/>
+        </methods>
+      </class> <!-- tests_swagLab.HomePageVerification -->
+      <class name="tests_michroTech_DataProvider.Test_Employee_Login">
+        <methods>
+          <include name="Close_All"/>
+          <include name="startUp"/>
+          <include name="test_Employee_Login"/>
+        </methods>
+      </class> <!-- tests_michroTech_DataProvider.Test_Employee_Login -->
+      <class name="tests_michroTech_DataProvider.HomePageVerification">
+        <methods>
+          <include name="Close_All"/>
+          <include name="homePageVerify6"/>
+          <include name="homePageVerify4"/>
+          <include name="homePageVerify5"/>
+          <include name="homePageVerify2"/>
+          <include name="homePageVerify3"/>
+          <include name="startUp"/>
+        </methods>
+      </class> <!-- tests_michroTech_DataProvider.HomePageVerification -->
+      <class name="tests_michroTech.HomePageVerification">
+        <methods>
+          <include name="homePageVerify6"/>
+          <include name="homePageVerify3"/>
+          <include name="homePageVerify5"/>
+          <include name="homePageVerify2"/>
+          <include name="Close_All"/>
+          <include name="startUp"/>
+          <include name="homePageVerify4"/>
+        </methods>
+      </class> <!-- tests_michroTech.HomePageVerification -->
+      <class name="tests_michroTech.Test_Employee_Login">
+        <methods>
+          <include name="Close_All"/>
+          <include name="startUp"/>
+          <include name="test_Employee_Login"/>
+        </methods>
+      </class> <!-- tests_michroTech.Test_Employee_Login -->
+    </classes>
+  </test> <!-- class25_TestNG_Verification_Test(failed) -->
+</suite> <!-- Failed suite [class25_TestNG] -->
